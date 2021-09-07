@@ -1,40 +1,34 @@
 # node-random-color-generator
 
-## Return a random color in the command line
-When somebody enters a specific command in the command line, a block of approximately 31x9 # characters and of a random color (using hex code, e.g. #ff0000) should be generated. 
+Create an application that will return a random color in the command line.
 
-This is the output that needs to be generated:
-```bash
-node index.js
-###############################
-###############################
-###############################
-####                      #####
-####        #ff0000       #####
-####                      #####
-###############################
-###############################
-###############################
-```
+It should work like this:
 
-```bash
-hue – Controls the hue of the generated color. You can pass a string representing a color name: red, orange, yellow, green, blue, purple, pink and monochrome are currently supported. If you pass a hexidecimal color string such as #00FFFF, randomColor will extract its hue value and use that to generate colors.
+When somebody enters a specific command in the command line, a block of approximately 31x9 `#` characters and of a random color (using hex code, e.g. `#ff0000`) should be generated.
 
-luminosity – Controls the luminosity of the generated color. You can specify a string containing bright, light or dark.
-```
-```bash
-// Returns a hex code for a light blue
-randomColor({
-   luminosity: 'light',
-   hue: 'blue'
-});
-```
-```bash
-// Returns a hex code for a 'truly random' color
-randomColor({
-   luminosity: 'random',
-   hue: 'random'
-});
-```
+It should look pretty close to this:
 
+![Screen Shot 2020-09-09 at 15 53 33](https://user-images.githubusercontent.com/1935696/92607675-b56bd700-f2b4-11ea-9085-67af9369fa71.png)
 
+It should be able to not only accept the command itself, but also the request for a:
+
+- hue (e.g. green or red or blue)
+- luminosity (e.g. light or dark)
+
+...and then generate random colors that match those choices.
+
+For example:
+
+![Screen Shot 2020-09-09 at 15 54 42](https://user-images.githubusercontent.com/1935696/92607766-daf8e080-f2b4-11ea-9d6d-3bd8501da443.png)
+
+## Stretch goals
+
+- [ ] If a user types "ask" instead of a color name, print questions to ask the user for the name of the color and the luminosity
+- [ ] If a user types a size in the format of `WWxHH` (eg. `31x9`) **before** the color and luminosity, it will use this as the size of the box
+
+## Acceptance Criteria
+
+- [ ] Preflight runs through without errors in your project
+  - [ ] Link in your GitHub repo's About section: repl.it demo
+- [ ] [Drone bot](https://learn.upleveled.io/courses/btcmp-l-webfs-gen-0/modules/100-cheatsheet-tasks/#upleveled-drone) has been tagged and responded with a passing message
+- [ ] Correct GitHub commit message format (see [Writing Commit Messages](https://learn.upleveled.io/courses/btcmp-l-webfs-gen-0/modules/103-cheatsheet-git-github/#writing-commit-messages))
