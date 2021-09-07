@@ -5,7 +5,6 @@
   "repository": "https://github.com/mtslks/node-random-color-generator",
   "author": "Mathias Lukas <mathias.lukas@me.com>",
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
     "@next/eslint-plugin-next": "^11.0.0",
     "@types/node": "^16.0.0",
@@ -33,5 +32,11 @@
   "resolutions": {
     "eslint-plugin-react": "7.24.0",
     "eslint-plugin-testing-library": "4.6.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "prompt-sync": "^4.2.0",
+    "prompt-sync-history": "^1.0.1",
+    "randomcolor": "^0.6.2"
   }
 }
